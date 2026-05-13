@@ -39,6 +39,82 @@ export default function App() {
           </div>
         </div>
       </section>
+      {/* CATEGORIES */}
+<section className="px-6 py-16">
+  <div className="text-center mb-12">
+    <h2 className="text-4xl font-bold mb-4">
+      Explore Developer Categories
+    </h2>
+
+    <p className="text-gray-400">
+      Hire skilled tech talents for any type of project.
+    </p>
+  </div>
+
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div className="bg-zinc-900 border border-green-500/20 rounded-2xl p-6 hover:border-green-500 transition">
+      <h3 className="text-2xl font-bold text-green-400 mb-3">
+        Frontend Developers
+      </h3>
+
+      <p className="text-gray-400">
+        React, Next.js, Tailwind, Vue and modern UI experts.
+      </p>
+    </div>
+
+    <div className="bg-zinc-900 border border-green-500/20 rounded-2xl p-6 hover:border-green-500 transition">
+      <h3 className="text-2xl font-bold text-green-400 mb-3">
+        Backend Engineers
+      </h3>
+
+      <p className="text-gray-400">
+        Node.js, Express, APIs, databases and scalable systems.
+      </p>
+    </div>
+
+    <div className="bg-zinc-900 border border-green-500/20 rounded-2xl p-6 hover:border-green-500 transition">
+      <h3 className="text-2xl font-bold text-green-400 mb-3">
+        Mobile Developers
+      </h3>
+
+      <p className="text-gray-400">
+        Flutter, React Native and Android/iOS app development.
+      </p>
+    </div>
+
+    <div className="bg-zinc-900 border border-green-500/20 rounded-2xl p-6 hover:border-green-500 transition">
+      <h3 className="text-2xl font-bold text-green-400 mb-3">
+        UI/UX Designers
+      </h3>
+
+      <p className="text-gray-400">
+        Modern interfaces, product design and user experiences.
+      </p>
+    </div>
+
+    <div className="bg-zinc-900 border border-green-500/20 rounded-2xl p-6 hover:border-green-500 transition">
+      <h3 className="text-2xl font-bold text-green-400 mb-3">
+        Cybersecurity Experts
+      </h3>
+
+      <p className="text-gray-400">
+        Security audits, penetration testing and infrastructure security.
+      </p>
+    </div>
+
+    <div className="bg-zinc-900 border border-green-500/20 rounded-2xl p-6 hover:border-green-500 transition">
+      <h3 className="text-2xl font-bold text-green-400 mb-3">
+        AI Engineers
+      </h3>
+
+      <p className="text-gray-400">
+        AI automation, machine learning and chatbot integration.
+      </p>
+    </div>
+
+  </div>
+</section>
 
       {/* HOW IT WORKS */}
       <section className="px-6 py-10 border-t border-green-500/10 text-center">
