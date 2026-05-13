@@ -5,7 +5,7 @@ export default function App() {
       <nav className="flex justify-between items-center px-6 py-4 border-b border-green-500/20">
         <h1 className="text-2xl font-bold text-green-400">9jaDevs</h1>
         <a
-          href="mailto:9jadevs@gmail.com"
+         href="#developers"
           className="px-4 py-2 border border-green-500 rounded-lg hover:bg-green-500 hover:text-black transition"
         >
           Contact Us
@@ -40,7 +40,7 @@ export default function App() {
         </div>
       </section>
       {/* CATEGORIES */}
-<section className="px-6 py-16">
+<section id="developers" className="px-6 py-16 bg-zinc-950">
   <div className="text-center mb-12">
     <h2 className="text-4xl font-bold mb-4">
       Explore Developer Categories
