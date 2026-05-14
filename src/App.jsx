@@ -34,22 +34,17 @@ export default function App() {
 
           <div className="flex flex-col md:flex-row gap-4 justify-center">
 
-         <button
-            onClick={() => {
-            setShowDevelopers(true);
-
-            setTimeout(() => {
-           document.getElementById("developers")?.scrollIntoView({
-           behavior: "smooth",
-           });
-           }, 100);
-           }}
-            className="px-6 py-3 bg-green-500 text-black font-bold rounded-xl hover:bg-green-400 transition">
-            Browse Developers
-         </button>
-
+      <button
+          onClick={() => {
+          document.getElementById("contact")?.scrollIntoView({
+         behavior: "smooth",
+         });
+         }}
+         className="px-4 py-2 border border-green-500 rounded-lg hover:bg-green-500 hover:text-black transition">
+         Contact Us
+      </button>
             <a
-              href="https://wa.me/2340000000000"
+              href="https://wa.me/2349136208539"
               className="px-6 py-3 border border-green-500 rounded-xl hover:bg-green-500 hover:text-black transition"
             >
               Apply as Developer
@@ -265,6 +260,120 @@ export default function App() {
           </div>
         </section>
       )}
+
+      {/* CLIENT REQUEST FORM */}
+<section
+           id="contact"
+          className="px-6 py-20 bg-black border-t border-green-500/10">
+         <div className="max-w-3xl mx-auto">
+
+         <div className="text-center mb-12">
+         <h2 className="text-4xl font-bold mb-4 text-green-400">
+         Start Your Project
+         </h2>
+
+          <p className="text-gray-400 text-lg">
+          Tell us about your project and we’ll connect you with the right developer.
+         </p>
+         </div>
+
+         <form
+         action="https://formsubmit.co/9jadevs@gmail.com"
+         method="POST"
+         className="space-y-6"
+         >
+
+         <input
+         type="hidden"
+         name="_captcha"
+         value="false"
+         />
+
+         <div>
+         <label className="block mb-2 text-sm text-gray-300">
+          Full Name
+         </label>
+
+         <input
+          type="text"
+          name="name"
+          required
+          placeholder="John Doe"
+          className="w-full bg-zinc-900 border border-green-500/20 rounded-xl px-4 py-3 outline-none focus:border-green-500"
+         />
+         </div>
+
+      <div>
+        <label className="block mb-2 text-sm text-gray-300">
+          Email Address
+        </label>
+
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="john@example.com"
+          className="w-full bg-zinc-900 border border-green-500/20 rounded-xl px-4 py-3 outline-none focus:border-green-500"
+        />
+      </div>
+
+      <div>
+        <label className="block mb-2 text-sm text-gray-300">
+          Project Type
+        </label>
+
+        <select
+          name="project"
+          className="w-full bg-zinc-900 border border-green-500/20 rounded-xl px-4 py-3 outline-none focus:border-green-500"
+        >
+          <option>Frontend Website</option>
+          <option>Backend System</option>
+          <option>Mobile App</option>
+          <option>UI/UX Design</option>
+          <option>Cybersecurity</option>
+          <option>AI Project</option>
+        </select>
+      </div>
+
+      <div>
+        <label className="block mb-2 text-sm text-gray-300">
+          Budget
+        </label>
+
+        <input
+          type="text"
+          name="budget"
+          placeholder="$500 - $5000"
+          className="w-full bg-zinc-900 border border-green-500/20 rounded-xl px-4 py-3 outline-none focus:border-green-500"
+        />
+      </div>
+
+      <div>
+        <label className="block mb-2 text-sm text-gray-300">
+          Project Description
+        </label>
+
+        <textarea
+          name="description"
+          rows="6"
+          required
+          placeholder="Describe your project..."
+          className="w-full bg-zinc-900 border border-green-500/20 rounded-xl px-4 py-3 outline-none focus:border-green-500"
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        className="w-full bg-green-500 text-black py-4 rounded-xl font-bold text-lg hover:bg-green-400 transition"
+      >
+        Submit Project Request
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
 
       {/* HOW IT WORKS */}
       <section className="px-6 py-10 border-t border-green-500/10 text-center">
