@@ -44,7 +44,7 @@ export default function App() {
          Contact Us
       </button>
             <a
-              href="https://wa.me/2340000000"
+              href="https://wa.me/2349136208539"
               className="px-6 py-3 border border-green-500 rounded-xl hover:bg-green-500 hover:text-black transition"
             >
               Apply as Developer
@@ -385,8 +385,6 @@ export default function App() {
           Clients send requests via email. Developers apply via WhatsApp or email. We handle the matching.
         </p>
       </section>
-
-      
 
       {/* FOOTER */}
       <footer className="px-6 py-6 border-t border-green-500/10 text-center text-gray-500">
