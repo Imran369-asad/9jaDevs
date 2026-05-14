@@ -34,12 +34,19 @@ export default function App() {
 
           <div className="flex flex-col md:flex-row gap-4 justify-center">
 
-            <button
-              onClick={() => setShowDevelopers(true)}
-              className="px-6 py-3 bg-green-500 text-black font-bold rounded-xl hover:bg-green-400 transition"
-            >
-              Browse Developers
-            </button>
+         <button
+            onClick={() => {
+            setShowDevelopers(true);
+
+            setTimeout(() => {
+           document.getElementById("developers")?.scrollIntoView({
+           behavior: "smooth",
+           });
+           }, 100);
+           }}
+            className="px-6 py-3 bg-green-500 text-black font-bold rounded-xl hover:bg-green-400 transition">
+            Browse Developers
+         </button>
 
             <a
               href="https://wa.me/2340000000000"
@@ -131,7 +138,7 @@ export default function App() {
 
       {/* FEATURED DEVELOPERS */}
       {showDevelopers && (
-        <section className="px-6 py-16 bg-zinc-950">
+        <section id="developers" className="px-6 py-16 bg-zinc-950">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">
               Featured Developers
