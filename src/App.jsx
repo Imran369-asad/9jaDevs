@@ -2,7 +2,6 @@ import { useState } from "react";
 
 export default function App() {
   const [showDevelopers, setShowDevelopers] = useState(false);
-  const [showContact, setShowContact] = useState(false);
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col">
@@ -44,7 +43,6 @@ export default function App() {
          className="px-4 py-2 border border-green-500 rounded-lg hover:bg-green-500 hover:text-black transition">
          Contact Us
       </button>
-
             <a
               href="https://wa.me/2340000000"
               className="px-6 py-3 border border-green-500 rounded-xl hover:bg-green-500 hover:text-black transition"
@@ -150,11 +148,113 @@ export default function App() {
 
             {/* CARD 1 */}
             <div className="bg-zinc-900 border border-green-500/20 rounded-3xl overflow-hidden hover:border-green-500 transition">
+
               <img
                 src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000"
                 alt="Developer"
                 className="w-full h-64 object-cover"
               />
+
+              <div className="p-6">
+                <div className="flex justify-between items-center mb-3">
+                  <h3 className="text-2xl font-bold">
+                    David Johnson
+                  </h3>
+
+                  <span className="text-xs bg-green-500 text-black px-3 py-1 rounded-full font-bold">
+                    Available
+                  </span>
+                </div>
+
+                <p className="text-green-400 mb-3">
+                  Frontend Developer
+                </p>
+
+                <p className="text-gray-400 mb-4">
+                  4+ years experience building React and Next.js applications.
+                </p>
+
+                <a
+                  href="mailto:9jadevs@gmail.com?subject=Hire David Johnson"
+                  className="block text-center bg-green-500 text-black py-3 rounded-xl font-bold hover:bg-green-400 transition"
+                >
+                  Hire Developer
+                </a>
+              </div>
+            </div>
+
+            {/* CARD 2 */}
+            <div className="bg-zinc-900 border border-green-500/20 rounded-3xl overflow-hidden hover:border-green-500 transition">
+
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000"
+                alt="Developer"
+                className="w-full h-64 object-cover"
+              />
+
+              <div className="p-6">
+                <div className="flex justify-between items-center mb-3">
+                  <h3 className="text-2xl font-bold">
+                    Aisha Bello
+                  </h3>
+
+                  <span className="text-xs bg-green-500 text-black px-3 py-1 rounded-full font-bold">
+                    Available
+                  </span>
+                </div>
+
+                <p className="text-green-400 mb-3">
+                  Backend Engineer
+                </p>
+
+                <p className="text-gray-400 mb-4">
+                  Expert in Node.js APIs and scalable backend systems.
+                </p>
+
+                <a
+                  href="mailto:9jadevs@gmail.com?subject=Hire Aisha Bello"
+                  className="block text-center bg-green-500 text-black py-3 rounded-xl font-bold hover:bg-green-400 transition"
+                >
+                  Hire Developer
+                </a>
+              </div>
+            </div>
+
+            {/* CARD 3 */}
+            <div className="bg-zinc-900 border border-green-500/20 rounded-3xl overflow-hidden hover:border-green-500 transition">
+
+              <img
+                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000"
+                alt="Developer"
+                className="w-full h-64 object-cover"
+              />
+
+              <div className="p-6">
+                <div className="flex justify-between items-center mb-3">
+                  <h3 className="text-2xl font-bold">
+                    Michael James
+                  </h3>
+
+                  <span className="text-xs bg-green-500 text-black px-3 py-1 rounded-full font-bold">
+                    Available
+                  </span>
+                </div>
+
+                <p className="text-green-400 mb-3">
+                  Mobile App Developer
+                </p>
+
+                <p className="text-gray-400 mb-4">
+                  Flutter and React Native developer building modern apps.
+                </p>
+
+                <a
+                  href="mailto:9jadevs@gmail.com?subject=Hire Michael James"
+                  className="block text-center bg-green-500 text-black py-3 rounded-xl font-bold hover:bg-green-400 transition"
+                >
+                  Hire Developer
+                </a>
+              </div>
             </div>
 
           </div>
@@ -162,79 +262,136 @@ export default function App() {
       )}
 
       {/* CLIENT REQUEST FORM */}
-      <section
-        id="contact"
-        className="px-6 py-20 bg-black border-t border-green-500/10">
-        <div className="max-w-3xl mx-auto">
+<section
+           id="contact"
+          className="px-6 py-20 bg-black border-t border-green-500/10">
+         <div className="max-w-3xl mx-auto">
 
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-green-400">
-              Start Your Project
-            </h2>
-          </div>
+         <div className="text-center mb-12">
+         <h2 className="text-4xl font-bold mb-4 text-green-400">
+         Start Your Project
+         </h2>
 
-        </div>
+          <p className="text-gray-400 text-lg">
+          Tell us about your project and we’ll connect you with the right developer.
+         </p>
+         </div>
+
+         <form
+         action="https://formsubmit.co/9jadevs@gmail.com"
+         method="POST"
+         className="space-y-6"
+         >
+
+         <input
+         type="hidden"
+         name="_captcha"
+         value="false"
+         />
+
+         <div>
+         <label className="block mb-2 text-sm text-gray-300">
+          Full Name
+         </label>
+
+         <input
+          type="text"
+          name="name"
+          required
+          placeholder="John Doe"
+          className="w-full bg-zinc-900 border border-green-500/20 rounded-xl px-4 py-3 outline-none focus:border-green-500"
+         />
+         </div>
+
+      <div>
+        <label className="block mb-2 text-sm text-gray-300">
+          Email Address
+        </label>
+
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="john@example.com"
+          className="w-full bg-zinc-900 border border-green-500/20 rounded-xl px-4 py-3 outline-none focus:border-green-500"
+        />
+      </div>
+
+      <div>
+        <label className="block mb-2 text-sm text-gray-300">
+          Project Type
+        </label>
+
+        <select
+          name="project"
+          className="w-full bg-zinc-900 border border-green-500/20 rounded-xl px-4 py-3 outline-none focus:border-green-500"
+        >
+          <option>Frontend Website</option>
+          <option>Backend System</option>
+          <option>Mobile App</option>
+          <option>UI/UX Design</option>
+          <option>Cybersecurity</option>
+          <option>AI Project</option>
+        </select>
+      </div>
+
+      <div>
+        <label className="block mb-2 text-sm text-gray-300">
+          Budget
+        </label>
+
+        <input
+          type="text"
+          name="budget"
+          placeholder="$500 - $5000"
+          className="w-full bg-zinc-900 border border-green-500/20 rounded-xl px-4 py-3 outline-none focus:border-green-500"
+        />
+      </div>
+
+      <div>
+        <label className="block mb-2 text-sm text-gray-300">
+          Project Description
+        </label>
+
+        <textarea
+          name="description"
+          rows="6"
+          required
+          placeholder="Describe your project..."
+          className="w-full bg-zinc-900 border border-green-500/20 rounded-xl px-4 py-3 outline-none focus:border-green-500"
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        className="w-full bg-green-500 text-black py-4 rounded-xl font-bold text-lg hover:bg-green-400 transition"
+      >
+        Submit Project Request
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+      {/* HOW IT WORKS */}
+      <section className="px-6 py-10 border-t border-green-500/10 text-center">
+        <h3 className="text-2xl font-bold mb-4">
+          How it works
+        </h3>
+
+        <p className="text-gray-400">
+          Clients send requests via email. Developers apply via WhatsApp or email. We handle the matching.
+        </p>
       </section>
 
-      {/* POPUP CONTACT FORM */}
-      {showContact && (
-        <div className="fixed inset-0 bg-black/80 flex items-center justify-center px-4">
+      
 
-          <div className="bg-zinc-900 w-full max-w-xl p-6 rounded-xl border border-green-500/20">
-
-            <div className="flex justify-between mb-4">
-              <h2 className="text-2xl font-bold text-green-400">
-                Contact 9jaDevs
-              </h2>
-
-              <button
-                onClick={() => setShowContact(false)}
-                className="text-red-400"
-              >
-                X
-              </button>
-            </div>
-
-            <form
-              action="https://formsubmit.co/9jadevs@gmail.com"
-              method="POST"
-              className="space-y-4"
-            >
-              <input type="hidden" name="_captcha" value="false" />
-
-              <input
-                name="name"
-                placeholder="Your Name"
-                className="w-full p-3 bg-black border border-green-500/20 rounded"
-                required
-              />
-
-              <input
-                name="email"
-                placeholder="Your Email"
-                className="w-full p-3 bg-black border border-green-500/20 rounded"
-                required
-              />
-
-              <textarea
-                name="message"
-                placeholder="What do you need?"
-                className="w-full p-3 bg-black border border-green-500/20 rounded"
-                rows="5"
-                required
-              />
-
-              <button
-                type="submit"
-                className="w-full bg-green-500 text-black py-3 rounded font-bold"
-              >
-                Send Message
-              </button>
-            </form>
-
-          </div>
-        </div>
-      )}
+      {/* FOOTER */}
+      <footer className="px-6 py-6 border-t border-green-500/10 text-center text-gray-500">
+        © 2026 9jaDevs. All rights reserved.
+      </footer>
 
     </div>
   );
