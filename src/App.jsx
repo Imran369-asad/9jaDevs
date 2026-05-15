@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export default function App() {
   const [showDevelopers, setShowDevelopers] = useState(false);
+  const [showContact, setShowContact] = useState(false);
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col">
@@ -12,12 +13,12 @@ export default function App() {
           9jaDevs
         </h1>
 
-        <a
-          href="mailto:9jadevs@gmail.com"
+        <button
+          onClick={() => setShowContact(true)}
           className="px-4 py-2 border border-green-500 rounded-lg hover:bg-green-500 hover:text-black transition"
         >
           Contact Us
-        </a>
+        </button>
       </nav>
 
       {/* HERO */}
@@ -34,21 +35,26 @@ export default function App() {
 
           <div className="flex flex-col md:flex-row gap-4 justify-center">
 
-      <button
-          onClick={() => {
-          document.getElementById("contact")?.scrollIntoView({
-         behavior: "smooth",
-         });
-         }}
-         className="px-4 py-2 border border-green-500 rounded-lg hover:bg-green-500 hover:text-black transition">
-         Contact Us
-      </button>
+            <button
+              onClick={() => setShowContact(true)}
+              className="px-4 py-2 border border-green-500 rounded-lg hover:bg-green-500 hover:text-black transition"
+            >
+              Contact Us
+            </button>
+
             <a
               href="https://wa.me/2349136208539"
               className="px-6 py-3 border border-green-500 rounded-xl hover:bg-green-500 hover:text-black transition"
             >
               Apply as Developer
             </a>
+
+            <button
+              onClick={() => setShowDevelopers(!showDevelopers)}
+              className="px-6 py-3 bg-green-500 text-black font-bold rounded-xl hover:bg-green-400 transition"
+            >
+              {showDevelopers ? "Hide Developers" : "Browse Developers"}
+            </button>
 
           </div>
         </div>
@@ -261,119 +267,76 @@ export default function App() {
         </section>
       )}
 
-      {/* CLIENT REQUEST FORM */}
-<section
-           id="contact"
-          className="px-6 py-20 bg-black border-t border-green-500/10">
-         <div className="max-w-3xl mx-auto">
+      {/* POPUP CONTACT FORM */}
+      {showContact && (
+        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 px-4">
 
-         <div className="text-center mb-12">
-         <h2 className="text-4xl font-bold mb-4 text-green-400">
-         Start Your Project
-         </h2>
+          <div className="bg-zinc-900 w-full max-w-xl p-6 rounded-2xl border border-green-500/20">
 
-          <p className="text-gray-400 text-lg">
-          Tell us about your project and we’ll connect you with the right developer.
-         </p>
-         </div>
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-3xl font-bold text-green-400">
+                Contact 9jaDevs
+              </h2>
 
-         <form
-         action="https://formsubmit.co/9jadevs@gmail.com"
-         method="POST"
-         className="space-y-6"
-         >
+              <button
+                onClick={() => setShowContact(false)}
+                className="text-red-400 text-xl"
+              >
+                ✕
+              </button>
+            </div>
 
-         <input
-         type="hidden"
-         name="_captcha"
-         value="false"
-         />
+            <form
+              action="https://formsubmit.co/9jadevs@gmail.com"
+              method="POST"
+              className="space-y-4"
+            >
 
-         <div>
-         <label className="block mb-2 text-sm text-gray-300">
-          Full Name
-         </label>
+              <input type="hidden" name="_captcha" value="false" />
 
-         <input
-          type="text"
-          name="name"
-          required
-          placeholder="John Doe"
-          className="w-full bg-zinc-900 border border-green-500/20 rounded-xl px-4 py-3 outline-none focus:border-green-500"
-         />
-         </div>
+              <input
+                type="hidden"
+                name="_next"
+                value="https://9jadevs.vercel.app"
+              />
 
-      <div>
-        <label className="block mb-2 text-sm text-gray-300">
-          Email Address
-        </label>
+              <input
+                type="text"
+                name="name"
+                required
+                placeholder="Your Name"
+                className="w-full bg-black border border-green-500/20 rounded-xl px-4 py-3 outline-none focus:border-green-500"
+              />
 
-        <input
-          type="email"
-          name="email"
-          required
-          placeholder="john@example.com"
-          className="w-full bg-zinc-900 border border-green-500/20 rounded-xl px-4 py-3 outline-none focus:border-green-500"
-        />
-      </div>
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="Your Email"
+                className="w-full bg-black border border-green-500/20 rounded-xl px-4 py-3 outline-none focus:border-green-500"
+              />
 
-      <div>
-        <label className="block mb-2 text-sm text-gray-300">
-          Project Type
-        </label>
+              <textarea
+                name="message"
+                rows="5"
+                required
+                placeholder="Tell us about your project..."
+                className="w-full bg-black border border-green-500/20 rounded-xl px-4 py-3 outline-none focus:border-green-500"
+              ></textarea>
 
-        <select
-          name="project"
-          className="w-full bg-zinc-900 border border-green-500/20 rounded-xl px-4 py-3 outline-none focus:border-green-500"
-        >
-          <option>Frontend Website</option>
-          <option>Backend System</option>
-          <option>Mobile App</option>
-          <option>UI/UX Design</option>
-          <option>Cybersecurity</option>
-          <option>AI Project</option>
-        </select>
-      </div>
+              <button
+                type="submit"
+                className="w-full bg-green-500 text-black py-4 rounded-xl font-bold hover:bg-green-400 transition"
+              >
+                Send Message
+              </button>
 
-      <div>
-        <label className="block mb-2 text-sm text-gray-300">
-          Budget
-        </label>
+            </form>
 
-        <input
-          type="text"
-          name="budget"
-          placeholder="$500 - $5000"
-          className="w-full bg-zinc-900 border border-green-500/20 rounded-xl px-4 py-3 outline-none focus:border-green-500"
-        />
-      </div>
+          </div>
 
-      <div>
-        <label className="block mb-2 text-sm text-gray-300">
-          Project Description
-        </label>
-
-        <textarea
-          name="description"
-          rows="6"
-          required
-          placeholder="Describe your project..."
-          className="w-full bg-zinc-900 border border-green-500/20 rounded-xl px-4 py-3 outline-none focus:border-green-500"
-        ></textarea>
-      </div>
-
-      <button
-        type="submit"
-        className="w-full bg-green-500 text-black py-4 rounded-xl font-bold text-lg hover:bg-green-400 transition"
-      >
-        Submit Project Request
-      </button>
-
-    </form>
-
-  </div>
-
-</section>
+        </div>
+      )}
 
       {/* HOW IT WORKS */}
       <section className="px-6 py-10 border-t border-green-500/10 text-center">
