@@ -345,7 +345,7 @@ export default function App() {
         </h3>
 
         <p className="text-gray-400">
-          Clients send requests via email. Developers apply via WhatsApp or email. We handle the matching.
+          Clients send requests via email. Developers apply via WhatsApp or email. And our team will reply to you within minutes.
         </p>
       </section>
 
