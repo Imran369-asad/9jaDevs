@@ -349,6 +349,41 @@ export default function App() {
         </p>
       </section>
 
+      {/* COMMUNITY LINKS */}
+      <section className="px-6 py-12 border-t border-green-500/10 text-center">
+          <h3 className="text-3xl font-bold mb-4 text-green-400">
+          Join Our Community
+         </h3>
+
+       <p className="text-gray-400 mb-8">
+        Connect with developers, clients, and tech enthusiasts.
+       </p>
+
+     <div className="flex flex-col md:flex-row gap-4 justify-center">
+
+      {/* WHATSAPP */}
+      <a
+       href="https://chat.whatsapp.com/YOUR-WHATSAPP-LINK"
+       target="_blank"
+       rel="noopener noreferrer"
+       className="px-6 py-3 bg-green-500 text-black rounded-xl font-bold hover:bg-green-400 transition"
+       >
+       Join WhatsApp Community
+     </a>
+
+      {/* TELEGRAM */}
+    <a
+      href="https://t.me/YOUR-TELEGRAM-LINK"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-6 py-3 border border-green-500 rounded-xl hover:bg-green-500 hover:text-black transition"
+    >
+      Join Telegram Community
+    </a>
+
+     </div>
+     </section>
+
       {/* FOOTER */}
       <footer className="px-6 py-6 border-t border-green-500/10 text-center text-gray-500">
         © 2026 9jaDevs. All rights reserved.
