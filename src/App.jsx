@@ -13,12 +13,12 @@ export default function App() {
           9jaDevs
         </h1>
 
-        <button
-          onClick={() => setShowContact(true)}
-          className="px-4 py-2 border border-green-500 rounded-lg hover:bg-green-500 hover:text-black transition"
-        >
-          Contact Us
-        </button>
+        
+        <a
+            href="mailto:9jadevs@gmail.com"
+            className="px-4 py-2 border border-green-500 rounded-lg hover:bg-green-500 hover:text-black transition" >
+           Contact Us
+        </a>
       </nav>
 
       {/* HERO */}
@@ -383,6 +383,79 @@ export default function App() {
 
      </div>
      </section>
+
+     {/* AI SUPPORT POPUP */}
+{showContact && (
+  <div className="fixed inset-0 bg-black/80 flex items-center justify-center px-4 z-50">
+
+    <div className="bg-zinc-900 w-full max-w-xl p-6 rounded-2xl border border-green-500/20">
+
+      <div className="flex justify-between items-center mb-6">
+        <h2 className="text-2xl font-bold text-green-400">
+          9jaDevs AI Support
+        </h2>
+
+        <button
+          onClick={() => setShowContact(false)}
+          className="text-red-400 text-xl"
+        >
+          ✕
+        </button>
+      </div>
+
+      <form
+        action="https://formsubmit.co/9jadevs@gmail.com"
+        method="POST"
+        className="space-y-4"
+      >
+
+        <input type="hidden" name="_captcha" value="false" />
+
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+          className="w-full p-3 bg-black border border-green-500/20 rounded-xl"
+        />
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+          className="w-full p-3 bg-black border border-green-500/20 rounded-xl"
+        />
+
+        <select
+          name="support"
+          className="w-full p-3 bg-black border border-green-500/20 rounded-xl"
+        >
+          <option>General Support</option>
+          <option>Hire Developer</option>
+          <option>Technical Help</option>
+          <option>Business Inquiry</option>
+        </select>
+
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Describe your issue..."
+          required
+          className="w-full p-3 bg-black border border-green-500/20 rounded-xl"
+        ></textarea>
+
+        <button
+          type="submit"
+          className="w-full bg-green-500 text-black py-3 rounded-xl font-bold hover:bg-green-400 transition"
+        >
+          Send Message
+        </button>
+
+      </form>
+    </div>
+  </div>
+)}
 
       {/* FOOTER */}
       <footer className="px-6 py-6 border-t border-green-500/10 text-center text-gray-500">
