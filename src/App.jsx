@@ -13,12 +13,6 @@ export default function App() {
           9jaDevs
         </h1>
 
-        
-        <a
-            href="mailto:9jadevs@gmail.com"
-            className="px-4 py-2 border border-green-500 rounded-lg hover:bg-green-500 hover:text-black transition" >
-           Support
-        </a>
       </nav>
 
       {/* HERO */}
